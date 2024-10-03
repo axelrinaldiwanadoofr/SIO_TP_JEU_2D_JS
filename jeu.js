@@ -12,3 +12,5 @@ for( let i=0 ; i<10 ; i++ )
     acteurs.push( new Acteur( x, y, "images/sol.png") ) ;
     x += 32 ;
 }
+
+acteurs[3].translateTo( 0, -32) ;
