@@ -29,3 +29,8 @@ Acteur.prototype.translateTo = function( xDeplacement , yDeplacement )
 {
    this.moveTo(this.x + xDeplacement , this.y + yDeplacement); 
 }
+
+Acteur.prototype.onTimeOut = function( uneScene )
+{
+} ;
+

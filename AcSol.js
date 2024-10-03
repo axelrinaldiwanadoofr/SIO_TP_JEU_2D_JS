@@ -6,4 +6,6 @@ function AcSol( x, y )
     Acteur.call( this, x, y, "images/sol.png" ) ;
 }
 
-AcSol.prototype["__proto__"] = Acteur.prototype ;
+//AcSol.prototype["__proto__"] = Acteur.prototype ;
+
+extend( AcSol, Acteur ) ;
