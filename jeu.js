@@ -23,12 +23,18 @@ scene.ajoute( sol ) ;
 
 scene.translateTo( 200, 200 ) ;
 
+/*
 for( let i=0 ; i<50 ; i++ )
 {
     scene.ajoute( new AcBalle( 
         Math.random() * 200, Math.random() * 200,
         Math.random()*20 -10 , Math.random()*20 -10 ) ) ;
 }
+*/
+
+scene.ajoute( new AcBalle( 100, window.innerHeight-32, 3, -5, 0, 0.1 ) ) ;
+
+
 // On définit un timer toutes les 20 ms
 setInterval( function ()
 {
