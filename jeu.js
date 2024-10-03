@@ -18,6 +18,8 @@ for( let i=0 ; i<10 ; i++ )
     x += 32 ;
 }
 
+let sol = new AcSol( 50, 50 ) ;
+scene.ajoute( sol ) ;
+
 scene.translateTo( 200, 200 ) ;
 
-let sol = new AcSol( 50, 50 ) ;
