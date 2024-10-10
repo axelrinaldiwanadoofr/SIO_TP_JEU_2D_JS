@@ -23,5 +23,31 @@ function AcAnimated( x, y, nomsFichiersImage )
 
         let terrain = document.getElementById( "terrainDeJeu") ;
         terrain.appendChild( image ) ;  
+        this.images.push( image ) ;
     }
+
+    this.images[this.indexImageCourante].style.display = "block" ;
+}
+
+extend( AcAnimated, Acteur ) ;
+
+AcAnimated.prototype.onTimeOut = function( scene )
+{
+    if( this.countTimeOut >= this.periode )
+    {
+        // On cache l'image courante
+        this.images[this.indexImageCourante].style.display = "none" ;
+
+        // On passe à l'image suivante
+        this.indexImageCourante++ ;
+        if( this.indexImageCourante > this.indexFin ) 
+            this.indexImageCourante = this.indexDebut ;
+
+        // On affiche l'image suivante
+        this.images[this.indexImageCourante].style.display = "block" ;
+
+        // Remise à 0 du compteur de timeOut
+        this.countTimeOut = 0 ;
+    }
+    else this.countTimeOut++ ;
 }

@@ -34,6 +34,7 @@ for( let i=0 ; i<50 ; i++ )
 
 scene.ajoute( new AcBalle( 100, window.innerHeight-32, 3, -5, 0, 0.1 ) ) ;
 
+scene.ajoute( new AcAnimated( 100, 100, ["images/eau1.bmp", "images/eau2.bmp"])) ;
 
 // On définit un timer toutes les 20 ms
 setInterval( function ()
